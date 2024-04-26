@@ -12,16 +12,60 @@
     justify-content: space-between;
 }
 .Logo{
-    width: 120px;
+    width: 275px;
     cursor: pointer;
+    background: transparent;
 }
 .navbar ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
+    position: relative;
 }
 .navbar ul li a{
 text-decoration: none;
 color: #000;
 text-transform: uppercase;
+}
+.navbar ul li::after{
+content: '';
+height: 3px;
+width: 0;
+background: #B99976;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: 0.5s;
+}
+.navbar ul li:hover:after{
+width: 100%;
+}
+.content{
+width: 100%;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+text-align: center;
+color:#000;
+}
+.content.h1{
+    font-size:70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25 px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #B99976;
+    background: #664229;
+    color: #e5d3b3;
+    cursor:pointer;
 }
