@@ -1,0 +1,476 @@
+
+/* Home page */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans Regular';
+}
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Logo{
+  width: 275px;
+  cursor: pointer;
+  background: transparent;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a{
+text-decoration: none;
+color: #000;
+text-transform: uppercase;
+font-size: large;
+}
+.navbar ul li::after{
+content: '';
+height: 3px;
+width: 0;
+background: #B99976;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: 0.5s;
+}
+.navbar ul li:hover:after{
+width: 100%;
+}
+.content{
+width: 100%;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+text-align: center;
+color:#000;
+}
+.content.h1{
+font-size: 70px;
+  margin-top: 80px;
+}
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 25 px;
+}
+
+/*Sign up & login in buttons*/
+button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid #B99976;
+  background: transparent;
+  color: #664229;
+  cursor:pointer;
+  position: relative;
+  overflow: hidden;
+}
+span{
+  background: #e5d3b3;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+button:hover span{
+width: 100%;
+}
+button:hover{
+  border: none;
+}
+
+
+/* Notifications page*/
+
+:root {
+--primary-red: hsl(1, 90%, 64%);
+--primary-blue: hsl(219, 85%, 26%);
+
+--neutral-white: hsl(0, 0%, 100%);
+--neutral-light-brown: hsl(#fbf8f3);
+--neutral-light-brown-1: hsl(#f6f0e6);
+--neutral-light-brown-2: hsl(#f2e9da);
+--neutral-dark-brown: hsl(#5c4033);
+--neutral-very-dark-brown: hsl(#2e201a);
+}
+
+.container {
+width: 1440px;
+margin: 0px auto;
+background: var(--neutral-light-brown);
+border: 1px solid var(--neutral-light-brown);
+}
+
+.attribution {
+margin: 50px auto 5px;
+}
+
+.app {
+width: 700px;
+margin: 50px auto;
+background: var(--neutral-white);
+border-radius: 20px;
+padding: 15px 25px;
+}
+
+.app .header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 50px;
+}
+
+.header h2 {
+font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.header h2 .title {
+font-size: 20px;
+text-align: center;
+}
+
+.header h2 .unread-notification-number {
+text-align: center;
+background: #b99976;
+color: var(--neutral-white);
+width: 25px;
+height: 20px;
+font-size: 14px;
+border-radius: 5px;
+}
+
+.header p {
+color: var(--neutral-dark-brown);
+cursor: pointer;
+}
+
+.header p:hover {
+color: var(--primary-blue);
+}
+
+.app .body {
+margin-top: 15px;
+}
+
+.body .notification {
+background: var(--neutral-light-brown);
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+padding: 15px;
+border-radius: 10px;
+cursor: pointer;
+transition: all .3s ease-in-out;
+margin: 10px 0px;
+}
+
+.body .notification:hover {
+background: var(--neutral-light-brown-1);
+}
+
+.notification-click {
+animation: notification-click .5s ease-in-out forwards;
+}
+
+@keyframes notification-click {
+0% {
+  background: var(--neutral-light-brown-1);
+}
+
+50% {
+  background: var(--neutral-light-brown-2);
+}
+
+100% {
+  background: none;
+}
+}
+
+.notification .avatar {
+width: 8%;
+}
+
+.notification .avatar img {
+width: 100%;
+}
+
+.notification .text {
+width: 92%;
+}
+
+.text .text-top p {
+color: var(--neutral-light-brown);
+}
+
+.text .text-top p .profil-name {
+font-weight: 800;
+}
+
+.text .text-top p b {
+color: var(--neutral-dark-brown);
+display: inline-block;
+}
+
+.text .text-top p .unread-dot {
+display: inline-block;
+width: 10px;
+height: 10px;
+margin: 0px 0px 1px 7px;
+border-radius: 50%;
+background: var(--primary-red);
+}
+
+.text .text-bottom {
+color: rgba(94, 103, 120, .5);
+}
+
+.text .text-top p .b-blue {
+color: var(--primary-blue);
+}
+
+.notification.readed {
+background: none;
+}
+
+.notification.private-message .avatar {
+align-self: start;
+}
+
+.notification.private-message .avatar {
+align-self: start;
+}
+
+.notification.readed .text-bottom p {
+color: var(--neutral-dark-grayish-blue);
+padding: 20px;
+border: 1px solid var(--neutral-light-brown-2);
+margin-top: 10px;
+}
+
+.notification.readed .text p b {
+display: inline;
+}
+
+.notification.picture .avatar {
+width: 8%;
+}
+
+.notification.picture .text {
+width: 84%;
+}
+
+.notification.picture .commented-picture {
+width: 8%;
+}
+
+.notification.picture .commented-picture img {
+width: 100%;
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+* {
+  font-size: 14px;
+}
+
+.container {
+  width: 375px;
+}
+
+.app {
+  width: 375px;
+  margin: 0 auto;
+  padding: 15px 15px;
+}
+
+.notification .avatar {
+  width: 15%;
+}
+
+.notification .text {
+  width: 85%;
+}
+
+.notification.readed .text-bottom p {
+  font-size: 13px;
+}
+
+.notification.picture .avatar {
+  width: 15%;
+}
+
+.notification.picture .text {
+  width: 70%;
+}
+
+.notification.picture .commented-picture {
+  width: 15%;
+}
+}
+
+/* Login page */
+.loginBody {
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Lucida Sans Regular';
+line-height: 1.5;
+min-height: 100vh;
+background: #f3f3f3;
+flex-direction: column;
+margin: 0;
+}
+
+.mainLogin {
+background-color: #fff;
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+padding: 10px 20px;
+transition: transform 0.2s;
+width: 500px;
+text-align: center;
+}
+
+.loginHead-1 {
+color: #B99976;
+}
+
+.loginLabel {
+display: block;
+width: 100%;
+margin-top: 10px;
+margin-bottom: 5px;
+text-align: left;
+color: #555;
+font-weight: bold;
+}
+
+
+input {
+display: block;
+width: 100%;
+margin-bottom: 15px;
+padding: 10px;
+box-sizing: border-box;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.loginButton {
+padding: 15px;
+border-radius: 10px;
+margin-top: 15px;
+margin-bottom: 15px;
+border: none;
+border: 2px solid #B99976;
+color: #664229;
+cursor: pointer;
+background-color: transparent;
+width: 100%;
+font-size: 16px;
+}
+
+.wrap {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Appointments Calendar*/
+
+.apptBody body{
+display: flex;
+align-items: center;
+padding: 0 10px;
+justify-content: center;
+min-height: 100vh;
+background: #fff;
+}
+.apptWrapper .wrapper{
+width: 450px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 15px 40px rgba(42, 24, 24, 0.34);
+}
+.apptWrapper .wrapper header{
+display: flex;
+align-items: center;
+padding: 25px 30px 10px;
+justify-content: space-between;
+}
+header .current-date{
+font-size: 1.45rem;
+font-weight: 500;
+}
+.calendar{
+padding: 20px;
+}
+.calendar ul{
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+text-align: center;
+}
+.calendar .days{
+margin-bottom: 20px;
+}
+.calendar li{
+color: #333;
+width: calc(100% / 7);
+font-size: 1.07rem;
+}
+.calendar .weeks li{
+font-weight: 500;
+cursor: default;
+}
+.calendar .days li{
+z-index: 1;
+cursor: pointer;
+position: relative;
+margin-top: 30px;
+}
+.days li.inactive{
+color: #aaa;
+}
+.days li.active{
+color: #fff;
+}
+.days li::before{
+position: absolute;
+content: "";
+left: 50%;
+top: 50%;
+height: 40px;
+width: 40px;
+z-index: -1;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+}
+.days li.active::before{
+background: #b99976;
+}
+.days li:not(.active):hover::before{
+background: #f2f2f2;
+}
