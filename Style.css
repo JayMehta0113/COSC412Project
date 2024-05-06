@@ -27,6 +27,7 @@
 text-decoration: none;
 color: #000;
 text-transform: uppercase;
+font-size: large;
 }
 .navbar ul li::after{
 content: '';
@@ -50,14 +51,17 @@ text-align: center;
 color:#000;
 }
 .content.h1{
-    font-size:70px;
+  font-size: 70px;
     margin-top: 80px;
 }
 .content p{
     margin: 20px auto;
     font-weight: 100;
+    font-size: 18px;
     line-height: 25 px;
 }
+
+/*Sign up & login in buttons*/
 button{
     width: 200px;
     padding: 15px 0;
@@ -65,6 +69,7 @@ button{
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
+    font-size: 20px;
     border: 2px solid #B99976;
     background: transparent;
     color: #664229;
@@ -73,7 +78,7 @@ button{
     overflow: hidden;
 }
 span{
-    background: #B99976;
+    background: #e5d3b3;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -91,63 +96,25 @@ button:hover{
 }
 
 
-/* Notifs page */
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Lucida Sans Regular';
-}
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.Logo{
-    width: 120px;
-    cursor: pointer;
-}
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-.navbar ul li a{
-text-decoration: none;
-color: #000;
-text-transform: uppercase;
-}
-
-/* notifications*/
+/* Notifications page*/
 
 :root {
   --primary-red: hsl(1, 90%, 64%);
   --primary-blue: hsl(219, 85%, 26%);
 
   --neutral-white: hsl(0, 0%, 100%);
-  --neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
-  --neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
-  --neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
-  --neutral-dark-grayish-blue: hsl(219, 12%, 42%);
-  --neutral-very-dark-blue: hsl(224, 21%, 14%);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
-  color: var(--neutral-very-dark-blue);
+  --neutral-light-brown: hsl(#fbf8f3);
+  --neutral-light-brown-1: hsl(#f6f0e6);
+  --neutral-light-brown-2: hsl(#f2e9da);
+  --neutral-dark-brown: hsl(#5c4033);
+  --neutral-very-dark-brown: hsl(#2e201a);
 }
 
 .container {
   width: 1440px;
   margin: 0px auto;
-  background: var(--neutral-very-light-grayish-blue);
-  border: 1px solid var(--neutral-very-light-grayish-blue);
+  background: var(--neutral-light-brown);
+  border: 1px solid var(--neutral-light-brown);
 }
 
 .attribution {
@@ -179,6 +146,7 @@ text-transform: uppercase;
 
 .header h2 .title {
   font-size: 20px;
+  text-align: center;
 }
 
 .header h2 .unread-notification-number {
@@ -192,7 +160,7 @@ text-transform: uppercase;
 }
 
 .header p {
-  color: var(--neutral-dark-grayish-blue);
+  color: var(--neutral-dark-brown);
   cursor: pointer;
 }
 
@@ -205,7 +173,7 @@ text-transform: uppercase;
 }
 
 .body .notification {
-  background: var(--neutral-very-light-grayish-blue);
+  background: var(--neutral-light-brown);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -218,7 +186,7 @@ text-transform: uppercase;
 }
 
 .body .notification:hover {
-  background: var(--neutral-light-grayish-blue-1);
+  background: var(--neutral-light-brown-1);
 }
 
 .notification-click {
@@ -227,11 +195,11 @@ text-transform: uppercase;
 
 @keyframes notification-click {
   0% {
-    background: var(--neutral-light-grayish-blue-1);
+    background: var(--neutral-light-brown-1);
   }
 
   50% {
-    background: var(--neutral-light-grayish-blue-2);
+    background: var(--neutral-light-brown-2);
   }
 
   100% {
@@ -252,7 +220,7 @@ text-transform: uppercase;
 }
 
 .text .text-top p {
-  color: var(--neutral-dark-grayish-blue);
+  color: var(--neutral-light-brown);
 }
 
 .text .text-top p .profil-name {
@@ -260,7 +228,7 @@ text-transform: uppercase;
 }
 
 .text .text-top p b {
-  color: var(--neutral-dark-grayish-blue);
+  color: var(--neutral-dark-brown);
   display: inline-block;
 }
 
@@ -296,7 +264,7 @@ text-transform: uppercase;
 .notification.readed .text-bottom p {
   color: var(--neutral-dark-grayish-blue);
   padding: 20px;
-  border: 1px solid var(--neutral-light-grayish-blue-2);
+  border: 1px solid var(--neutral-light-brown-2);
   margin-top: 10px;
 }
 
@@ -361,12 +329,12 @@ text-transform: uppercase;
   }
 }
 
-* login page */
+/* Login page */
 .loginBody {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: 'Lucida Sans Regular';
   line-height: 1.5;
   min-height: 100vh;
   background: #f3f3f3;
@@ -415,9 +383,10 @@ input {
   margin-top: 15px;
   margin-bottom: 15px;
   border: none;
-  color: white;
+  border: 2px solid #B99976;
+  color: #664229;
   cursor: pointer;
-  background-color: #B99976;
+  background-color: transparent;
   width: 100%;
   font-size: 16px;
 }
@@ -426,4 +395,81 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Appointments Calendar*/
+
+.apptBody body{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fff;
+}
+.apptWrapper .wrapper{
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(42, 24, 24, 0.34);
+}
+.apptWrapper .wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #b99976;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
 }
