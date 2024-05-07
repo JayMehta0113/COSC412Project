@@ -23,105 +23,70 @@
         <li><a href="messagesPage.html">Messages</a></li>
         <li><a href="accountPage.html">Account</a></li>
     </ul>
-</div>
-
-    <div class="navbar">
-    <img src="CO.Name.png" className="Logo" alt='logo'></img>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/appointments">Appointments</a></li>
-        <li><a href="notifications">Notifications</a></li>
-        <li><a href="/messages">Messages</a></li>
-        <li><a href="/account">Account</a></li>
-    </ul>
-    <div className='delete-account'>
-    <form id="delete-account" onSubmit={handleDelete}>
-      <p>Enter info to delete account</p>
-                <label className="loginLabel">
-                    Username:
-                </label>
-                <input
-                    onChange={e=>setUserId(e.target.value)}
-                    type="text"
-                    id="username"
-                    name="first"
-                    placeholder="Enter your Username"
-                    required
-                />
-
-                <label className="loginLabel" htmlFor="password">
-                    Password:
-                </label>
-                <input
-                    onChange={e=>setPassword(e.target.value)}
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your Password"
-                    required
-                />
-                <button type="submit">submit</button>
-</form>
-
-
-<form id="change-user" onSubmit={handleChange}>
-      <p>Enter info to delete account</p>
-                <label className="loginLabel">
-                    Username:
-                </label>
-                <input
-                    onChange={e=>setUserId(e.target.value)}
-                    type="text"
-                    id="username"
-                    name="first"
-                    placeholder="Enter your Username"
-                    required
-                />
-
-                <label className="loginLabel" htmlFor="password">
-                    Password:
-                </label>
-                <input
-                    onChange={e=>setPassword(e.target.value)}
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your Password"
-                    required
-                />
-                <label className="loginLabel" htmlFor="newPassword">
-                    New password:
-                </label>
-                <input
-                    onChange={e=>setPassword(e.target.value)}
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your new Password"
-                    required
-                />
-
-                <button type="submit">submit</button>
-</form>
-
-
     </div>
-    </div>
+    <div class='delete-account'>
+        <form id="delete-account">
+          <p>Enter information to delete account</p>
+                    <label class="loginLabel">
+                        Username:
+                    </label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="first"
+                        placeholder="Enter your Username"
+                        required
+                    />
     
-<footer>
-    <div class="footerContainer">
-        <div class="socialIcons">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-google-plus"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <label class="loginLabel" >
+                        Password:
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your Password"
+                        required
+                    />
+                    <button type="submit"><span></span>Submit</button>
+    </form>
+    
+    
+    <form id="change-user">
+          <p>Enter information to change password</p>
+                    <label class="loginLabel">
+                        Username:
+                    </label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="first"
+                        placeholder="Enter your Username"
+                        required
+                    />
+                    <label class="loginLabel">
+                        Current Password:
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your Old Password"
+                        required
+                    />
+                    <label class="loginLabel">
+                        New password:
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your New Password"
+                        required
+                    />
+    
+                    <button type="submit"><span></span>Submit</button>
+    </form>
         </div>
-    </div>
-    <div class="footerBottom">
-        <p>JK Appointments Co &copy;2024<span class="designer"></span></p>
-    </div>
-</footer>
-</body>
-
-</html>
+    </body>
+</html>-

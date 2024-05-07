@@ -97,236 +97,82 @@ button:hover{
 
 
 /* Notifications page*/
-
-:root {
-  --primary-red: hsl(1, 90%, 64%);
-  --primary-blue: hsl(219, 85%, 26%);
-
-  --neutral-white: hsl(0, 0%, 100%);
-  --neutral-light-brown: hsl(#fbf8f3);
-  --neutral-light-brown-1: hsl(#f6f0e6);
-  --neutral-light-brown-2: hsl(#f2e9da);
-  --neutral-dark-brown: hsl(#5c4033);
-  --neutral-very-dark-brown: hsl(#2e201a);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans Regular';
 }
-
-.container {
-  width: 1440px;
-  margin: 0px auto;
-  background: var(--neutral-light-brown);
-  border: 1px solid var(--neutral-light-brown);
+.notifscontainer{
+  display: flex;
+  align-content: center;
+  background-color: #B99976;
+  width: 70%;
+  height: 100vh;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  transform: translate(20%,0);
 }
-
-.attribution {
-  margin: 50px auto 5px;
-}
-
-.app {
+.notificationContainer{
+  background-color: #fff;
   width: 700px;
-  margin: 50px auto;
-  background: var(--neutral-white);
-  border-radius: 20px;
-  padding: 15px 25px;
+  margin: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  transform: translate(20%,0);
 }
-
-.app .header {
+header{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 50px;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
-
-.header h2 {
-  font-size: 20px;
+.notificationHeader{
   display: flex;
+  align-items: center;
+}
+#num-of-notif{
+  background-color: #664229;
+  color: #fff;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  font-weight: 700;
+  width: 30px;
+  height: 30px;
+  border-radius: 0.5rem;
+  transform: translate(800%,-1950%);
 }
-
-.header h2 .title {
-  font-size: 20px;
-  text-align: center;
-}
-
-.header h2 .unread-notification-number {
-  text-align: center;
-  background: #b99976;
-  color: var(--neutral-white);
-  width: 25px;
-  height: 20px;
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-.header p {
-  color: var(--neutral-dark-brown);
+#mark-as-read{
+  color: gray;
   cursor: pointer;
+  transition: 0.6s ease;
 }
-
-.header p:hover {
-  color: var(--primary-blue);
+#mark-as-read:hover{
+  color: black;
 }
-
-.app .body {
-  margin-top: 15px;
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-.body .notification {
-  background: var(--neutral-light-brown);
+.notificationCard{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.notificationCard img{
+  width: 50px;
+}
+.notificationCard .description{
+  margin-left: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-  margin: 10px 0px;
+  flex-direction: column;
 }
-
-.body .notification:hover {
-  background: var(--neutral-light-brown-1);
-}
-
-.notification-click {
-  animation: notification-click .5s ease-in-out forwards;
-}
-
-@keyframes notification-click {
-  0% {
-    background: var(--neutral-light-brown-1);
-  }
-
-  50% {
-    background: var(--neutral-light-brown-2);
-  }
-
-  100% {
-    background: none;
-  }
-}
-
-.notification .avatar {
-  width: 8%;
-}
-
-.notification .avatar img {
-  width: 100%;
-}
-
-.notification .text {
-  width: 92%;
-}
-
-.text .text-top p {
-  color: var(--neutral-light-brown);
-}
-
-.text .text-top p .profil-name {
-  font-weight: 800;
-}
-
-.text .text-top p b {
-  color: var(--neutral-dark-brown);
-  display: inline-block;
-}
-
-.text .text-top p .unread-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0px 0px 1px 7px;
-  border-radius: 50%;
-  background: var(--primary-red);
-}
-
-.text .text-bottom {
-  color: rgba(94, 103, 120, .5);
-}
-
-.text .text-top p .b-blue {
-  color: var(--primary-blue);
-}
-
-.notification.readed {
-  background: none;
-}
-
-.notification.private-message .avatar {
-  align-self: start;
-}
-
-.notification.private-message .avatar {
-  align-self: start;
-}
-
-.notification.readed .text-bottom p {
-  color: var(--neutral-dark-grayish-blue);
-  padding: 20px;
-  border: 1px solid var(--neutral-light-brown-2);
-  margin-top: 10px;
-}
-
-.notification.readed .text p b {
-  display: inline;
-}
-
-.notification.picture .avatar {
-  width: 8%;
-}
-
-.notification.picture .text {
-  width: 84%;
-}
-
-.notification.picture .commented-picture {
-  width: 8%;
-}
-
-.notification.picture .commented-picture img {
-  width: 100%;
-}
-
-/* responsive */
-@media screen and (max-width: 375px) {
-  * {
-    font-size: 14px;
-  }
-
-  .container {
-    width: 375px;
-  }
-
-  .app {
-    width: 375px;
-    margin: 0 auto;
-    padding: 15px 15px;
-  }
-
-  .notification .avatar {
-    width: 15%;
-  }
-
-  .notification .text {
-    width: 85%;
-  }
-
-  .notification.readed .text-bottom p {
-    font-size: 13px;
-  }
-
-  .notification.picture .avatar {
-    width: 15%;
-  }
-
-  .notification.picture .text {
-    width: 70%;
-  }
-
-  .notification.picture .commented-picture {
-    width: 15%;
-  }
+.unread{
+  background-color: #e5d3b3;
 }
 
 /* Login page */
@@ -956,4 +802,27 @@ footer{
       padding: 8px;
       margin: 4px;
   }
+}
+
+/*Accounts Page*/
+.delete-account
+{
+  border: 2px solid #664229;
+  margin: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  width: 55%;
+  max-width: 70%;
+  transform: translate(35%,0%);
+}
+
+.delete-account p {
+  font-family: 'Lucida Sans Regular';
+  font-size: large;
+  color: #664229;
+  text-align: center;
+  background-color: #e5d3b3;
+  margin: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
 }
