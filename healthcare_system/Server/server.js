@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 //get login data to databse
 try{
-mongoose.connect('mongodb+srv://jaymehta0113:prolink484@prolinkcluster.wkozyum.mongodb.net/JK?retryWrites=true&w=majority&appName=ProlinkCluster');
+mongoose.connect();
 
 const db = 'prolink';
 const collection = 'User-Data';
