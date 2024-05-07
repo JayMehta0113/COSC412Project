@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>| Messages</title>
+<link rel="stylesheet" href="Style.css">
+<link rel="icon" type="image/x-icon" href="Logo.png">
+</head>
+<body>
+    <div class="navbar">
+        <img src="CO.Name.png" class="Logo">
+        <ul>
+            <li><a href="LandingPage.html">Home</a></li>
+            <li><a href="appointmentsPage.html">Appointments</a></li>
+            <li><a href="notifsPage.html">Notifications</a></li>
+            <li><a href="messagesPage.html">Messages</a></li>
+            <li><a href="accountPage.html">Account</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <table>
+            <tr>
+              <th>Messages</th>
+            </tr>
+            <tr data-href="messagesPage.html">
+                <td>Dr. Alfred Smith<br>Surgeon</td>
+            </tr>
+            <tr data-href="messagesBobby.html">
+                <td>Dr. Bobby Lee<br>Dentist</td>
+            </tr>
+            <tr data-href="messagesCathy.html">
+                <td>Dr. Cathy Love<br>Physical Therapist</td>
+            </tr>
+            <tr data-href="messagesSusie.html">
+                <td>Dr. Susie Hou<br>Orthodontist</td>
+        </tr>
+          </table>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const rows = document.querySelectorAll("tr[data-href]");
+                rows.forEach(row => {
+                    row.addEventListener("click", () => {
+                        window.location.href = row.dataset.href;
+                    });
+                });
+            });
+        </script> 
+      </div>
+<!-- Main container -->
+<div class="container">
+    <!-- msg-header section starts -->
+    <div class="msg-header">
+      <div class="container1">
+        <img src="user5.jpg" class="msgimg" />
+        <div class="active">
+          <p style="margin-top:20px;">Dr. Cathy Love</p>
+        </div>
+      </div>
+    </div>
+    <!-- msg-header section ends -->
+
+    <!-- Chat inbox  -->
+    <div class="chat-page">
+      <div class="msg-inbox">
+        <div class="chats">
+          <!-- Message container -->
+          <div class="msg-page">
+            <!-- Incoming messages -->
+
+            <div class="received-chats">
+              <div class="received-chats-img">
+                <img src="user2.jpg" />
+              </div>
+              <div class="received-msg">
+                <div class="received-msg-inbox">
+                  <p>
+                    Hi !! This is message from Cathy. Lorem ipsum, dolor sit
+                    amet consectetur adipisicing elit. Non quas nemo eum,
+                    earum sunt, nobis similique quisquam eveniet pariatur
+                    commodi modi voluptatibus iusto omnis harum illum iste
+                    distinctio expedita illo!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Outgoing messages -->
+            <div class="outgoing-chats">
+              <div class="outgoing-chats-img">
+                <img src="user5.jpg" />
+              </div>
+              <div class="outgoing-msg">
+                <div class="outgoing-chats-msg">
+                  <p class="multi-msg">
+                    Hi Cathy, Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Illo nobis deleniti earum magni
+                    recusandae assumenda.
+                  </p>
+                  <p class="multi-msg">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="received-chats">
+              <div class="received-chats-img">
+                <img src="user2.jpg" />
+              </div>
+              <div class="received-msg">
+                <div class="received-msg-inbox">
+                  <p class="single-msg">
+                    Lorem ipsum, dolor
+                    sit amet consectetur adipisicing elit. iste distinctio
+                    expedita illo!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="outgoing-chats">
+              <div class="outgoing-chats-img">
+                <img src="user5.jpg" />
+              </div>
+              <div class="outgoing-msg">
+                <div class="outgoing-chats-msg">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Velit, sequi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- msg-bottom section -->
+
+        <div class="msg-bottom">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Write message..."
+            />
+
+            <span class="input-group-text send-icon">
+              <i class="bi bi-send"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
