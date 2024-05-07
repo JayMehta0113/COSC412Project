@@ -24,6 +24,90 @@
         <li><a href="accountPage.html">Account</a></li>
     </ul>
 </div>
+
+    <div class="navbar">
+    <img src="CO.Name.png" className="Logo" alt='logo'></img>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/appointments">Appointments</a></li>
+        <li><a href="notifications">Notifications</a></li>
+        <li><a href="/messages">Messages</a></li>
+        <li><a href="/account">Account</a></li>
+    </ul>
+    <div className='delete-account'>
+    <form id="delete-account" onSubmit={handleDelete}>
+      <p>Enter info to delete account</p>
+                <label className="loginLabel">
+                    Username:
+                </label>
+                <input
+                    onChange={e=>setUserId(e.target.value)}
+                    type="text"
+                    id="username"
+                    name="first"
+                    placeholder="Enter your Username"
+                    required
+                />
+
+                <label className="loginLabel" htmlFor="password">
+                    Password:
+                </label>
+                <input
+                    onChange={e=>setPassword(e.target.value)}
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your Password"
+                    required
+                />
+                <button type="submit">submit</button>
+</form>
+
+
+<form id="change-user" onSubmit={handleChange}>
+      <p>Enter info to delete account</p>
+                <label className="loginLabel">
+                    Username:
+                </label>
+                <input
+                    onChange={e=>setUserId(e.target.value)}
+                    type="text"
+                    id="username"
+                    name="first"
+                    placeholder="Enter your Username"
+                    required
+                />
+
+                <label className="loginLabel" htmlFor="password">
+                    Password:
+                </label>
+                <input
+                    onChange={e=>setPassword(e.target.value)}
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your Password"
+                    required
+                />
+                <label className="loginLabel" htmlFor="newPassword">
+                    New password:
+                </label>
+                <input
+                    onChange={e=>setPassword(e.target.value)}
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your new Password"
+                    required
+                />
+
+                <button type="submit">submit</button>
+</form>
+
+
+    </div>
+    </div>
+    
 <footer>
     <div class="footerContainer">
         <div class="socialIcons">
